@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    /* 弹性布局 */
+    display: flex;
+    /* 居中对齐 */
+    justify-content: center;
+    /* 中点线对齐 */
+    align-items: center;
+    /* 添加一个背景颜色 */
+    background: linear-gradient(120deg,#eb0f0f,#00ffeb 100%);
+    background-repeat: no-repeat;
+}
+
+.card{
+    position: relative;
+    height: 450px;
+    width: 300px;
+    margin: 20px;
+    border-radius: 20px;
+    background: linear-gradient(120deg,#88ff64,#fff600 100%);
+    /* 隐藏超出的部分 */
+    overflow: hidden;
+    /* 弹性布局 */
+    display: flex;
+    /* 元素纵向排列 */
+    flex-direction: column;
+    /* 中心点对齐 */
+    align-items: center;
+    /* 防止图片被挤压 */
+    flex-shrink: 0;
+}
+
+.card .photo img{
+    width: 100%;
+    height: 100%;
+    /* 如果图片太大，就进行裁剪，保留原始尺寸 */
+    object-fit: cover;
+}
+
+.card .photo{
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: 100%;
+    border-radius: 0%;
+    /* 防止溢出 */
+    overflow: hidden;
+    /* 动画效果 */
+    transition: 1s;
+}
+
+.card:hover .photo{
+    top: 1000px;
+}

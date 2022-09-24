@@ -34,6 +34,8 @@ body{
     transition: 0.4s;
     justify-content: center;
     align-items: center;
+    /* 去除<a>默认下划线 */
+    text-decoration: none;
   }
 
   .text{
