@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title My Shoutout Page
+  body
+    h1#title Welcome to my shoutout page!
+    form(action="/shoutouts", method="post")
+      textarea#message(name="message")
+      br
+      button#submit(type="submit") Shoutout!
+    hr
+    each shoutout in shoutouts
+      div.shoutout
+        p= shoutout.message
+        small= shoutout.author

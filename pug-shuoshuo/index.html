@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Shoutout Page</title>
+  </head>
+  <body>
+    <h1 id="title">Welcome to my shoutout page!</h1>
+    <form action="/shoutouts" method="post">
+      <textarea id="message" name="message"></textarea>
+      <br>
+      <button id="submit" type="submit">Shoutout!</button>
+    </form>
+    <hr>
+    <div class="shoutout" *ngFor="let shoutout of shoutouts">
+      <p>{{shoutout.message}}</p>
+      <small>{{shoutout.author}}</small>
+    </div>
+  </body>
+</html>
